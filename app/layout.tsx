@@ -1,7 +1,7 @@
-import type { Metadata } from "next";
-import "./globals.css";
-import localFont from "next/font/local";
 import ThemeProvider from "@/components/providers/theme-provider";
+import type { Metadata } from "next";
+import localFont from "next/font/local";
+import "./globals.css";
 
 const rubik = localFont({
   src: "../public/assets/fonts/Rubik-VariableFont_wght.ttf",
@@ -21,7 +21,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={rubik.className}>
-    
         <ThemeProvider>{children}</ThemeProvider>
       </body>
     </html>
